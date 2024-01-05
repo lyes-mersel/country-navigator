@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito Sans", sans-serif;
+}
+
+#light * {
+	color: hsl(200, 15%, 8%);
+}
+
+#dark * {
+	color: hsl(0, 0%, 100%);
+}
+
+.App {
+	height: 100vh;
+}
+
+#light .App {
+	background-color: hsl(0, 0%, 98%);
+}
+
+#dark .App {
+	background-color: hsl(207, 26%, 17%);
+}
+
+/* Header */
+header {
+	padding: 10px 80px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#light header {
+	background-color: hsl(0, 0%, 100%);
+}
+
+#dark header {
+	background-color: hsl(209, 23%, 22%);
+}
+
+header h1 {
+	font-size: 30px;
+}
+
+header button {
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px;
+	border: none;
+	background-color: transparent;
+}
+
+header button:hover {
+	cursor: pointer;
+}
+
+#moon-icon {
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+}
+
+/* Home Page */
+.home-page {
+	font-size: 15px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-row-gap: 50px;
+	grid-column-gap: 50px;
+	padding: 80px;
+}
+
+#light .home-page{
+	background-color: hsl(0, 0%, 98%);
+}
+
+#dark .home-page {
+	background-color: hsl(207, 26%, 17%);
+}
+
+/* Details Page */
+.details-page {
+	font-size: 16px;
+}
+
+/* Cards */
+.card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+
+#light .card {
+	background-color: hsl(0, 0%, 100%);
+}
+
+#dark .card {
+	background-color: hsl(209, 23%, 22%);
+}
+
+.card h2 {
+	margin-bottom: 15px;
+	font-size: 22px;
+}
+
+.card span {
+	margin: 5px 0;
+}
+
+.card img {
+	width: 100%;
+	height: 150px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.card span {
+	display: block;
+}
+
+.info {
+	padding: 30px;
+}
+
+/* Details Page */

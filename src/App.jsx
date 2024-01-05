@@ -1,21 +1,27 @@
 import { useEffect, useState } from "react";
 import { useThemeContext } from "./hooks/useThemeContext";
+import { useCountryContext } from "./hooks/useCountryContext";
 
-import Home from "./pages/Home";
+import Home from "./pages/HomePage";
 import Header from "./components/Header";
-import DetailsPage from "./pages/Details";
+import DetailsPage from "./pages/DetailsPage";
 
 function App() {
 	const MAX_COUNTRIES_PAGE = 16;
 
 	const [pageNumber, setPageNumber] = useState(0);
 	const [countries, setCountries] = useState([[]]);
+	const [selectedCountry, setselectedCountry] = useState("be");
 
 	const { theme } = useThemeContext();
+	const { code } = useCountryContext();
+
 
 	useEffect(() => {
 		async function fetchData() {
-			const response = await fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca2");
+			const response = await fetch(
+				"https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca2"
+			);
 			const data = await response.json();
 			if (response.ok) {
 				let countriesList = [];
@@ -25,14 +31,13 @@ function App() {
 						indexGroup++;
 						countriesList[indexGroup] = [];
 					}
-
 					const countryInfos = {
-						id: indexCountry,
 						name: country.name.common,
 						flag: country.flags,
 						population: country.population,
 						region: country.region,
 						capital: country.capital,
+						cca2: country.cca2,
 					};
 					countriesList[indexGroup].push(countryInfos);
 				});
@@ -45,8 +50,11 @@ function App() {
 	return (
 		<div className="App" id={theme}>
 			<Header />
-			{/* <Home countries={countries[pageNumber]} /> */}
-			<DetailsPage countryCode={"dz"} />
+			{code === "" ? (
+				<Home countries={countries[pageNumber]} />
+			) : (
+				<DetailsPage countryCode={code} />
+			)}
 		</div>
 	);
 }

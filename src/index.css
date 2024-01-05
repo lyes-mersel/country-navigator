@@ -75,7 +75,7 @@ header button:hover {
 	padding: 80px;
 }
 
-#light .home-page{
+#light .home-page {
 	background-color: hsl(0, 0%, 98%);
 }
 
@@ -128,3 +128,27 @@ header button:hover {
 }
 
 /* Details Page */
+.details-page {
+	padding: 80px;
+}
+
+.details-section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 50px;
+}
+
+.details-section img {
+	width: 100%;
+}
+
+.details-section dt {
+	float: left;
+	clear: left;
+	text-align: left;
+	font-weight: bold;
+}
+.details-section dd {
+	float: left;
+	text-align: justify;
+}

@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 import CountryDetails from "../components/CountryDetails";
 import CircularIndeterminate from "../components/CircularIndeterminate";
-import { useCountryContext } from "../hooks/useCountryContext";
 
-const DetailsPage = (props) => {
+const DetailsPage = () => {
+	const navigate = useNavigate();
+	const { countryCode } = useParams();
 	const [countryInfo, setCountryInfo] = useState({});
-	const { dispatch } = useCountryContext();
 
 	const handleClick = () => {
-		dispatch({ type: "DELETE_COUNTRY" });
+		navigate("/");;
 	};
 
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await fetch(
-				"https://restcountries.com/v3.1/alpha?codes=" + props.countryCode
+				"https://restcountries.com/v3.1/alpha?codes=" + countryCode
 			);
 			const data = await response.json();
 			setCountryInfo(data[0]);

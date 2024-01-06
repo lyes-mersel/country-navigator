@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import { useCountryContext } from "../hooks/useCountryContext";
+import { useNavigate } from "react-router-dom";
 
 function Card(props) {
-	const { dispatch } = useCountryContext();
+	const navigate = useNavigate();
 
 	const handleClick = () => {
-		dispatch({type: "SET_COUNTRY", payload: props.info.cca2})
+		navigate("/" + props.info.cca2);
 	};
 
 	return (

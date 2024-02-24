@@ -10,22 +10,14 @@ function App() {
 
 	return (
 		<div className="App" id={mode}>
-			<Header />
 			<BrowserRouter>
+				<Header />
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path=":countryCode" element={<DetailsPage />} />
 					<Route path="*" element={<Navigate to={"/"} replace />} />
 				</Routes>
 			</BrowserRouter>
-
-			{/* {!dataFetched ? (
-				<CircularIndeterminate />
-			) : !countryCode ? (
-				<HomePage countries={countries[pageNumber]} />
-			) : (
-				<DetailsPage countryCode={countryCode} />
-			)} */}
 		</div>
 	);
 }

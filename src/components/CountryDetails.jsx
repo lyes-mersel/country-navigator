@@ -1,7 +1,12 @@
+import BorderCountry from "./BorderCountry";
+
 const CountryDetails = (props) => {
 	return (
 		<section className="details-section">
-			<img src={props.countryInfo.flags.png} alt={props.countryInfo.flags.alt} />
+			<img
+				src={props.countryInfo.flags.png}
+				alt={props.countryInfo.flags.alt}
+			/>
 			<div>
 				<h2>{props.countryInfo.name.common}</h2>
 				<dl>
@@ -49,6 +54,14 @@ const CountryDetails = (props) => {
 						{Object.values(props.countryInfo.languages).map(
 							(language, index, array) =>
 								index != array.length - 1 ? language + ", " : language
+						)}
+					</dd>
+					<dt>Border Countries:</dt>
+					<dd>
+						{Object.values(props.countryInfo.borders).map(
+							(borderCountry, index) => (
+								<BorderCountry key={index} code={borderCountry} />
+							)
 						)}
 					</dd>
 				</dl>

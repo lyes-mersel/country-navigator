@@ -1,7 +1,10 @@
 import { FaMoon, FaRegMoon } from "react-icons/fa";
 import { useGlobalContext } from "../hooks/useGlobalContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
+	const navigate = useNavigate();
+	const location = useLocation();
 	const { mode, dispatch } = useGlobalContext();
 
 	const toggleMode = () => {
@@ -10,9 +13,17 @@ const Header = () => {
 		localStorage.setItem("mode", resverse[mode]);
 	};
 
+	const goToHomePage = () => {
+		if (location.pathname === "/") {
+			navigate(0);
+		} else {
+			navigate("/");
+		}
+	};
+
 	return (
 		<header>
-			<h1>Where in the world?</h1>
+			<h1 onClick={goToHomePage}>Where in the world?</h1>
 			<button onClick={toggleMode}>
 				{mode == "dark" ? (
 					<FaMoon id="moon-icon" />

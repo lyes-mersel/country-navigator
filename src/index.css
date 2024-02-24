@@ -6,24 +6,18 @@
 	font-family: "Nunito Sans", sans-serif;
 }
 
+.App {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
 #light * {
 	color: hsl(200, 15%, 8%);
 }
 
 #dark * {
 	color: hsl(0, 0%, 100%);
-}
-
-.App {
-	height: 100vh;
-}
-
-#light .App {
-	background-color: hsl(0, 0%, 98%);
-}
-
-#dark .App {
-	background-color: hsl(207, 26%, 17%);
 }
 
 /* Header */
@@ -45,6 +39,10 @@ header {
 
 header h1 {
 	font-size: 30px;
+}
+
+header h1:hover {
+	cursor: pointer;
 }
 
 header button {
@@ -81,11 +79,6 @@ header button:hover {
 
 #dark .home-page {
 	background-color: hsl(207, 26%, 17%);
-}
-
-/* Details Page */
-.details-page {
-	font-size: 16px;
 }
 
 /* Cards */
@@ -129,7 +122,17 @@ header button:hover {
 
 /* Details Page */
 .details-page {
+	flex-grow: 1;
 	padding: 80px;
+	font-size: 16px;
+}
+
+#light .details-page {
+	background-color: hsl(0, 0%, 98%);
+}
+
+#dark .details-page {
+	background-color: hsl(207, 26%, 17%);
 }
 
 .details-section {

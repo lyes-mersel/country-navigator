@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
@@ -15,6 +15,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path=":countryCode" element={<DetailsPage />} />
+					<Route path="*" element={<Navigate to={"/"} replace />} />
 				</Routes>
 			</BrowserRouter>
 

@@ -11,7 +11,7 @@ const DetailsPage = () => {
 	const [countryInfo, setCountryInfo] = useState({});
 
 	const handleClick = () => {
-		navigate("/");;
+		navigate("/");
 	};
 
 	useEffect(() => {
@@ -19,8 +19,12 @@ const DetailsPage = () => {
 			const response = await fetch(
 				"https://restcountries.com/v3.1/alpha?codes=" + countryCode
 			);
-			const data = await response.json();
-			setCountryInfo(data[0]);
+			if (response.ok) {
+				const data = await response.json();
+				setCountryInfo(data[0]);
+			} else {
+				navigate("/", { replace: true });
+			}
 		};
 		fetchData();
 	}, []);

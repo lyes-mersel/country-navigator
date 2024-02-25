@@ -44,11 +44,15 @@ const HomePage = () => {
 	return (
 		<main className="home-page">
 			{!dataFetched ? (
-				<CircularIndeterminate />
+				<div className="circular-indeterminate">
+					<CircularIndeterminate />
+				</div>
 			) : (
-				countries[pageNumber].map((country) => (
-					<Card key={country.cca2} info={country} />
-				))
+				<div className="countries-list">
+					{countries[pageNumber].map((country) => (
+						<Card key={country.cca2} info={country} />
+					))}
+				</div>
 			)}
 		</main>
 	);

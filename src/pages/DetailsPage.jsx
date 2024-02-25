@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 import CountryDetails from "../components/CountryDetails";
 import CircularIndeterminate from "../components/CircularIndeterminate";
@@ -31,12 +31,16 @@ const DetailsPage = () => {
 
 	return (
 		<main className="details-page">
-			<button onClick={handleClick}>
-				<FaLongArrowAltLeft />
+			<div className="back-button" onClick={handleClick}>
+				<span className="arrow-left-icon">
+					<FaArrowLeftLong />
+				</span>
 				Back
-			</button>
+			</div>
 			{JSON.stringify(countryInfo) === JSON.stringify({}) ? (
-				<CircularIndeterminate />
+				<div className="circular-indeterminate">
+					<CircularIndeterminate />
+				</div>
 			) : (
 				<CountryDetails countryInfo={countryInfo} />
 			)}

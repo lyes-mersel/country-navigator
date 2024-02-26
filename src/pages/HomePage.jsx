@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
-import Card from "../components/Card";
-import CircularIndeterminate from "../components/CircularIndeterminate";
+import SearchFilterBars from "../components/SearchFilterBars";
+import CountriesList from "../components/CountriesList";
+import MyCircularIndeterminate from "../components/MyCircularIndeterminate";
 
 const HomePage = () => {
 	const MAX_COUNTRIES_PAGE = 16;
@@ -9,12 +10,13 @@ const HomePage = () => {
 	const [countries, setCountries] = useState([[]]);
 	const [pageNumber, setPageNumber] = useState(0);
 	const [dataFetched, setDataFetched] = useState(false);
+	const [url, setUrl] = useState(
+		"https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca2"
+	);
 
 	useEffect(() => {
 		async function fetchData() {
-			const response = await fetch(
-				"https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca2"
-			);
+			const response = await fetch(url);
 			const data = await response.json();
 			if (response.ok) {
 				let countriesList = [];
@@ -37,22 +39,39 @@ const HomePage = () => {
 				setCountries(countriesList);
 				setDataFetched(true);
 			}
+			else {
+				setCountries([[]])
+			}
 		}
 		fetchData();
-	}, []);
+	}, [url, setCountries, setDataFetched]);
+
+	const searchByName = (name) => {
+		setUrl(`https://restcountries.com/v3.1/name/${name}?fullText=true`);
+	};
+
+	const searchByRegion = (region) => {
+		region === ""
+			? setUrl(
+					"https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca2"
+			  )
+			: setUrl(
+					`https://restcountries.com/v3.1/region/${region}?fields=name,flags,population,region,capital,cca2`
+			  );
+	};
 
 	return (
 		<main className="home-page">
+			<SearchFilterBars
+				searchByRegion={searchByRegion}
+				searchByName={searchByName}
+			/>
 			{!dataFetched ? (
-				<div className="circular-indeterminate">
-					<CircularIndeterminate />
-				</div>
+				<MyCircularIndeterminate />
 			) : (
-				<div className="countries-list">
-					{countries[pageNumber].map((country) => (
-						<Card key={country.cca2} info={country} />
-					))}
-				</div>
+				<>
+					<CountriesList countries={countries[pageNumber]} />
+				</>
 			)}
 		</main>
 	);

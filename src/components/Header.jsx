@@ -1,6 +1,7 @@
 import { FaMoon, FaRegMoon } from "react-icons/fa";
 import { useGlobalContext } from "../hooks/useGlobalContext";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
 	const navigate = useNavigate();

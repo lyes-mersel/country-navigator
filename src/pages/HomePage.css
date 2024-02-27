@@ -1,0 +1,18 @@
+.home-page {
+	font-size: 14px;
+	padding: 40px 80px;
+	display: flex;
+	flex-direction: column;
+}
+
+.home-page-content {
+	flex-grow: 1;
+	clear: both;
+	position: relative;
+	bottom: 115px;
+	z-index: 0;
+}
+
+.select-page-section {
+    text-align: center;
+}

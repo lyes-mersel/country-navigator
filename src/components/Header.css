@@ -1,0 +1,41 @@
+header {
+	padding: 10px 80px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#light header {
+	background-color: hsl(0, 0%, 100%);
+}
+
+#dark header {
+	background-color: hsl(209, 23%, 22%);
+}
+
+header h1 {
+	font-size: 30px;
+}
+
+header h1:hover {
+	cursor: pointer;
+}
+
+header button {
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px;
+	border: none;
+	background-color: transparent;
+}
+
+header button:hover {
+	cursor: pointer;
+}
+
+#moon-icon {
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+}

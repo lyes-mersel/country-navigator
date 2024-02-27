@@ -1,0 +1,83 @@
+.search-bar {
+	float: left;
+}
+
+.search-bar {
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.search-bar span {
+	font-size: 22px;
+	position: relative;
+	top: 8px;
+	left: 10px;
+	color: #444;
+}
+
+.search-bar input {
+	width: 300px;
+	padding: 12px 20px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #444;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.filter-bar {
+	position: relative;
+	float: right;
+	z-index: 1;
+	width: 180px;
+}
+
+.filter-bar button {
+	text-align: left;
+	font-weight: 600;
+	color: #444;
+	display: block;
+	width: 100%;
+	padding: 3px 20px;
+	background-color: #fff;
+	border: none;
+	outline: none;
+}
+
+.filter-bar > button {
+	padding: 12px 60px 12px 20px;
+	border-radius: 5px;
+}
+
+.filter-bar > div {
+	margin-top: 5px;
+	padding: 5px 0;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.filter-bar span {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+
+.not-found {
+	clear: both;
+	text-align: center;
+	font-size: 25px;
+	color: #444;
+	font-weight: 600;
+}
+
+.not-found span {
+	position: relative;
+	bottom: 5px;
+	left: 10px;
+	font-size: 20px;
+}
+
+.hide {
+	opacity: 0;
+}

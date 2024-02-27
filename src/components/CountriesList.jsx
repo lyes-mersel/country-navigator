@@ -1,3 +1,4 @@
+import "./CountriesList.css";
 import Card from "../components/Card";
 
 const CountriesList = (props) => {

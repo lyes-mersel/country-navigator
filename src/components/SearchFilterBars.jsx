@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MdSearch } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
+import "./SearchFilterBars.css";
 
 const SearchFilterBars = (props) => {
 	const [name, setName] = useState("");
@@ -53,7 +54,7 @@ const SearchFilterBars = (props) => {
 	};
 
 	return (
-		<div className="search-filter-bars">
+		<>
 			<form className="search-bar" onSubmit={searchCountry}>
 				<span>
 					<MdSearch />
@@ -83,7 +84,7 @@ const SearchFilterBars = (props) => {
 					<button onClick={setRegionOceania}>Oceania</button>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

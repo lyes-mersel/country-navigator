@@ -1,0 +1,17 @@
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+#light footer {
+	background-color: hsl(0, 0%, 100%);
+}
+
+#dark footer {
+	background-color: hsl(209, 23%, 22%);
+}
+
+#light footer a {
+    color: hsl(200, 15%, 8%);
+    font-weight: 600;
+}

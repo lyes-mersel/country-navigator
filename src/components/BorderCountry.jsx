@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BorderCountry = (props) => {
 	const { code } = props;
+	const navigate = useNavigate();
 	const [name, setName] = useState();
 
 	useEffect(() => {
@@ -15,9 +17,13 @@ const BorderCountry = (props) => {
 			}
 		};
 		fetchData();
-	}, []);
+	}, [code, setName]);
 
-	return <span className="border-country">{name}</span>;
+	return (
+		<button className="border-country" onClick={() => navigate("/" + code)}>
+			{name}
+		</button>
+	);
 };
 
 export default BorderCountry;

@@ -17,7 +17,7 @@ function App() {
 				<Header />
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					<Route path=":countryCode" element={<DetailsPage />} />
+					<Route path="/:countryCode" element={<DetailsPage />} />
 					<Route path="*" element={<Navigate to={"/"} replace />} />
 				</Routes>
 				<Footer />

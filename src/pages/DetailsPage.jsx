@@ -28,7 +28,7 @@ const DetailsPage = () => {
 			}
 		};
 		fetchData();
-	}, []);
+	}, [countryCode, setCountryInfo, navigate]);
 
 	return (
 		<main className="details-page">

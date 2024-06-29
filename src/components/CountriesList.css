@@ -5,10 +5,3 @@
 	grid-column-gap: 50px;
 }
 
-#light .home-page {
-	background-color: hsl(0, 0%, 98%);
-}
-
-#dark .home-page {
-	background-color: hsl(207, 26%, 17%);
-}

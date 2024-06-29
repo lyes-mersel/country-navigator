@@ -1,17 +1,21 @@
 header {
+	position: relative;
 	padding: 10px 80px;
 	height: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	z-index: 10;
 }
 
 #light header {
 	background-color: hsl(0, 0%, 100%);
+	box-shadow: 0 5px 5px #f2f2f2;
 }
 
 #dark header {
 	background-color: hsl(209, 23%, 22%);
+	box-shadow: 0 5px 5px #1D2A34;
 }
 
 header h1 {

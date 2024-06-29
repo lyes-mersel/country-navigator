@@ -1,18 +1,30 @@
 .search-bar {
 	float: left;
-}
-
-.search-bar {
 	background-color: #fff;
 	border-radius: 5px;
+}
+
+#light .search-bar {
+	box-shadow: 3px 3px 5px #f2f2f2, -3px 3px 5px #f2f2f2, 3px -3px 5px #f2f2f2,
+		-3px -3px 5px #f2f2f2;
+}
+
+#dark .search-bar {
+	background-color: hsl(209, 23%, 22%);
+	box-shadow: 3px 3px 5px #1D2A34, -3px 3px 5px #1D2A34, 3px -3px 5px #1D2A34,
+		-3px -3px 5px #1D2A34;
 }
 
 .search-bar span {
 	font-size: 22px;
 	position: relative;
-	top: 8px;
+	top: 6px;
 	left: 10px;
 	color: #444;
+}
+
+#dark .search-bar span {
+	color: hsl(0, 0%, 100%);
 }
 
 .search-bar input {
@@ -24,6 +36,15 @@
 	color: #444;
 	font-size: 14px;
 	font-weight: 600;
+}
+
+#dark .search-bar input {
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(209, 23%, 22%);
+}
+
+#dark .search-bar input::placeholder {
+	color: hsl(0, 0%, 100%);
 }
 
 .filter-bar {
@@ -48,13 +69,45 @@
 .filter-bar > button {
 	padding: 12px 60px 12px 20px;
 	border-radius: 5px;
+	cursor: pointer;
+}
+
+.filter-bar > button:hover {
+	padding: 12px 60px 12px 20px;
+	border-radius: 5px;
+}
+
+#light .filter-bar > button {
+	box-shadow: 3px 3px 5px #f2f2f2, -3px 3px 5px #f2f2f2, 3px -3px 5px #f2f2f2,
+		-3px -3px 5px #f2f2f2;
+}
+
+#dark .filter-bar  button {
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(209, 23%, 22%);
+}
+
+#dark .filter-bar > button  {
+	box-shadow: 3px 3px 5px #1D2A34, -3px 3px 5px #1D2A34, 3px -3px 5px #1D2A34,
+	-3px -3px 5px #1D2A34;
 }
 
 .filter-bar > div {
+	position: absolute;
+	width: 100%;
 	margin-top: 5px;
 	padding: 5px 0;
 	background-color: #fff;
 	border-radius: 5px;
+}
+
+#light .filter-bar > div {
+	box-shadow: 3px -3px 5px #f2f2f2;
+}
+
+#dark .filter-bar > div {
+	background-color: hsl(209, 23%, 22%);
+	box-shadow:3px -3px 5px #1D2A34;
 }
 
 .filter-bar span {
@@ -63,21 +116,16 @@
 	right: 20px;
 }
 
-.not-found {
-	clear: both;
-	text-align: center;
-	font-size: 25px;
-	color: #444;
-	font-weight: 600;
+.filter-bar > div > button {
+	cursor: pointer;
 }
-
-.not-found span {
-	position: relative;
-	bottom: 5px;
-	left: 10px;
-	font-size: 20px;
+.filter-bar > div > button:hover {
+	font-size: 14px;
+}
+.filter-bar > div > button:active {
+	transform: scale(0.98);
 }
 
 .hide {
-	opacity: 0;
+	display: none;
 }

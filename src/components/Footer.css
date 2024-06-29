@@ -5,13 +5,22 @@ footer {
 
 #light footer {
 	background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 -5px 5px #f2f2f2;
 }
 
 #dark footer {
 	background-color: hsl(209, 23%, 22%);
+    box-shadow: 0 -5px 5px #1D2A34;
+}
+
+footer a {
+    font-weight: 600;
 }
 
 #light footer a {
     color: hsl(200, 15%, 8%);
-    font-weight: 600;
+}
+
+#dark footer a {
+    color: hsl(0, 0%, 100%);
 }

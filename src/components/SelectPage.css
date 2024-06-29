@@ -1,0 +1,31 @@
+.select-page {
+	display: inline-block;
+}
+
+.select-page:hover {
+	transform: scale(1.1);
+}
+.select-page:active {
+	transform: scale(0.9);
+}
+
+#light .select-page {
+}
+
+.select-page button {
+	margin: 0 5px;
+	padding: 8px;
+	width: 35px;
+	background-color: hsl(0, 0%, 100%);
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 3px 3px 5px #f2f2f2, -3px 3px 5px #f2f2f2, 3px -3px 5px #f2f2f2,
+		-3px -3px 5px #f2f2f2;
+}
+
+#dark .select-page button {
+	background-color: hsl(209, 23%, 22%);
+	box-shadow: 3px 3px 5px #1D2A34, -3px 3px 5px #1D2A34, 3px -3px 5px #1D2A34,
+		-3px -3px 5px #1D2A34;
+}

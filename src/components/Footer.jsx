@@ -3,9 +3,6 @@ import "./Footer.css";
 const Footer = () => {
 	return (
 		<footer>
-            <div>
-                
-            </div>
 			<p>
 				Challenge by{" "}
 				<a

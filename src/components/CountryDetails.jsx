@@ -7,10 +7,10 @@ const CountryDetails = (props) => {
 				src={props.countryInfo.flags.png}
 				alt={props.countryInfo.flags.alt}
 			/>
-			<div>
+			<div className="details-section-infos">
 				<h2>{props.countryInfo.name.common}</h2>
-				<dl>
-					<div className="details-section-left">
+				<div>
+					<dl className="details-section-left">
 						<dt>Native Names:</dt>
 						<dd>
 							{Object.values(props.countryInfo.name.nativeName).map(
@@ -28,9 +28,9 @@ const CountryDetails = (props) => {
 						<dd>{props.countryInfo.subregion}</dd>
 						<dt>Capital:</dt>
 						<dd>{props.countryInfo.capital}</dd>
-					</div>
+					</dl>
 
-					<div className="details-section-right">
+					<dl className="details-section-right">
 						<dt>Top Level Domains:</dt>
 						<dd>
 							{props.countryInfo.tld.map((tld, index, array) =>
@@ -55,22 +55,22 @@ const CountryDetails = (props) => {
 										: language
 							)}
 						</dd>
-					</div>
+					</dl>
+				</div>
 
-					<div className="details-section-bottom">
-						<dt>Border Countries:</dt>
-						<dd>
-							{"borders" in props.countryInfo ? (
-								Object.values(props.countryInfo.borders).map(
-									(borderCountry, index) => (
-										<BorderCountry key={index} code={borderCountry} />
-									)
+				<dl className="details-section-bottom">
+					<dt>Border Countries:</dt>
+					<dd>
+						{"borders" in props.countryInfo ? (
+							Object.values(props.countryInfo.borders).map(
+								(borderCountry, index) => (
+									<BorderCountry key={index} code={borderCountry} />
 								)
-							) : (
-								<>0</>
-							)}
-						</dd>
-					</div>
+							)
+						) : (
+							<>0</>
+						)}
+					</dd>
 				</dl>
 			</div>
 		</section>

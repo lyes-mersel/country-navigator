@@ -9,9 +9,6 @@
 	transform: scale(0.9);
 }
 
-#light .select-page {
-}
-
 .select-page button {
 	margin: 0 5px;
 	padding: 8px;
@@ -26,6 +23,6 @@
 
 #dark .select-page button {
 	background-color: hsl(209, 23%, 22%);
-	box-shadow: 3px 3px 5px #1D2A34, -3px 3px 5px #1D2A34, 3px -3px 5px #1D2A34,
-		-3px -3px 5px #1D2A34;
+	box-shadow: 3px 3px 5px #1d2a34, -3px 3px 5px #1d2a34, 3px -3px 5px #1d2a34,
+		-3px -3px 5px #1d2a34;
 }

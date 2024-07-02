@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-import "./HomePage.css";
 import SearchFilterBars from "../components/SearchFilterBars";
 import CountriesList from "../components/CountriesList";
-import MyCircularIndeterminate from "../components/MyCircularIndeterminate";
+import CircularIndeterminate from "../components/CircularIndeterminate";
 import NotFound from "../components/NotFound";
 import SelectPage from "../components/SelectPage";
+import "./HomePage.css";
 
 const HomePage = () => {
 	const MAX_COUNTRIES_PAGE = 16;
@@ -69,7 +69,7 @@ const HomePage = () => {
 				searchByName={searchByName}
 			/>
 			{!dataFetched ? (
-				<MyCircularIndeterminate />
+				<CircularIndeterminate />
 			) : countries.length === 0 ? (
 				<NotFound />
 			) : (

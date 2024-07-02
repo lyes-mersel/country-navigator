@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import "./BorderCountry.css";
+
 const BorderCountry = (props) => {
 	const { code } = props;
 	const navigate = useNavigate();
@@ -20,7 +22,10 @@ const BorderCountry = (props) => {
 	}, [code, setName]);
 
 	return (
-		<button className="border-country" onClick={() => navigate("/" + code)}>
+		<button
+			className="border-country cursor-pointer scale-effect-02"
+			onClick={() => navigate("/" + code)}
+		>
 			{name}
 		</button>
 	);

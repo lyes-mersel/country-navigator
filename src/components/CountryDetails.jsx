@@ -1,16 +1,17 @@
 import BorderCountry from "./BorderCountry";
+import "./CountryDetails.css";
 
 const CountryDetails = (props) => {
 	return (
-		<section className="details-section">
+		<section className="country-details">
 			<img
 				src={props.countryInfo.flags.png}
 				alt={props.countryInfo.flags.alt}
 			/>
-			<div className="details-section-infos">
+			<div className="country-details-infos">
 				<h2>{props.countryInfo.name.common}</h2>
 				<div>
-					<dl className="details-section-left">
+					<dl className="country-details-left">
 						<dt>Native Names:</dt>
 						<dd>
 							{Object.values(props.countryInfo.name.nativeName).map(
@@ -30,7 +31,7 @@ const CountryDetails = (props) => {
 						<dd>{props.countryInfo.capital}</dd>
 					</dl>
 
-					<dl className="details-section-right">
+					<dl className="country-details-right">
 						<dt>Top Level Domains:</dt>
 						<dd>
 							{props.countryInfo.tld.map((tld, index, array) =>
@@ -58,7 +59,7 @@ const CountryDetails = (props) => {
 					</dl>
 				</div>
 
-				<dl className="details-section-bottom">
+				<dl className="country-details-bottom">
 					<dt>Border Countries:</dt>
 					<dd>
 						{"borders" in props.countryInfo ? (

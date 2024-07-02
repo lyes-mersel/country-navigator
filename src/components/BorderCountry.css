@@ -1,0 +1,15 @@
+.border-country {
+	padding: 5px 15px;
+	margin: 0 5px 5px;
+	border-radius: 5px;
+}
+
+#light .border-country {
+	box-shadow: 1px 1px 3px #dedede, -1px 1px 3px #dedede, 1px -1px 3px #dedede,
+		-1px -1px 3px #dedede;
+}
+
+#dark .border-country {
+	box-shadow: 2px 2px 5px #1d2a34, -2px 2px 5px #1d2a34, 2px -2px 5px #1d2a34,
+		-2px -2px 5px #1d2a34;
+}

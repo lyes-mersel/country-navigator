@@ -1,15 +1,14 @@
 .not-found {
 	flex-grow: 1;
-	text-align: center;
-	font-size: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: #444;
+	font-size: 25px;
 	font-weight: 600;
-    flex-grow: 1;
 }
 
 .not-found span {
-	position: relative;
-	bottom: 5px;
-	left: 10px;
+	margin-left: 10px;
 	font-size: 20px;
 }

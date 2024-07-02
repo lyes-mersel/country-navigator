@@ -3,17 +3,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./DetailsPage.css";
 
 import CountryDetails from "../components/CountryDetails";
-import MyCircularIndeterminate from "../components/MyCircularIndeterminate";
-import MyFaArrowLeftLong from "../components/MyFaArrowLeftLong";
+import CircularIndeterminate from "../components/CircularIndeterminate";
+import BackButton from "../components/BackButton";
 
 const DetailsPage = () => {
 	const navigate = useNavigate();
 	const { countryCode } = useParams();
 	const [countryInfo, setCountryInfo] = useState({});
-
-	const handleClick = () => {
-		navigate("/");
-	};
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -32,12 +28,9 @@ const DetailsPage = () => {
 
 	return (
 		<main className="details-page">
-			<button className="back-button" onClick={handleClick}>
-				<MyFaArrowLeftLong />
-				Back
-			</button>
+			<BackButton />
 			{JSON.stringify(countryInfo) === JSON.stringify({}) ? (
-				<MyCircularIndeterminate />
+				<CircularIndeterminate />
 			) : (
 				<CountryDetails countryInfo={countryInfo} />
 			)}

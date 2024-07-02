@@ -1,0 +1,31 @@
+.back-button {
+	font-size: 15px;
+	font-weight: 600;
+	padding: 8px 30px;
+	margin-bottom: 50px;
+	border-radius: 5px;
+}
+
+#light .back-button {
+	box-shadow: 3px 3px 5px #dedede, -3px 3px 5px #dedede, 3px -3px 5px #dedede,
+		-3px -3px 5px #dedede;
+}
+
+#dark .back-button {
+	box-shadow: 3px 3px 5px #1d2a34, -3px 3px 5px #1d2a34, 3px -3px 5px #1d2a34,
+		-3px -3px 5px #1d2a34;
+}
+
+.arrow-left-icon {
+	margin-right: 10px;
+	position: relative;
+	top: 2px;
+}
+
+#light .arrow-left-icon {
+	color: hsl(200, 15%, 8%);
+}
+
+#dark .arrow-left-icon {
+	color: hsl(0, 0%, 100%);
+}

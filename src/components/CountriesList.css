@@ -1,7 +1,7 @@
 .countries-list {
+	margin: 50px 0;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-row-gap: 50px;
 	grid-column-gap: 50px;
 }
-

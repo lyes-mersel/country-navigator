@@ -1,40 +1,5 @@
 .home-page {
+	flex-grow: 1;
 	font-size: 14px;
 	padding: 40px 80px 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-#light .home-page {
-	background-color: hsl(0, 0%, 98%);
-}
-
-#dark .home-page {
-	background-color: hsl(207, 26%, 17%);
-}
-
-.home-page-content {
-	flex-grow: 1;
-	clear: both;
-	z-index: 0;
-	margin: 50px 0;
-}
-
-.select-page-section {
-    text-align: center;
-}
-
-.not-found {
-	clear: both;
-	text-align: center;
-	font-size: 25px;
-	color: #444;
-	font-weight: 600;
-}
-
-.not-found span {
-	position: relative;
-	bottom: 5px;
-	left: 10px;
-	font-size: 20px;
 }

@@ -2,18 +2,57 @@
 
 * {
 	font-family: "Nunito Sans", sans-serif;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .App {
-	height: 100vh;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 #light {
 	color: hsl(200, 15%, 8%);
+	background-color: hsl(0, 0%, 98%);
 }
 
 #dark {
+	border: none;
 	color: hsl(0, 0%, 100%);
+	background-color: hsl(207, 26%, 17%);
+}
+
+#light button {
+	border: none;
+	color: hsl(200, 15%, 8%);
+	background-color: hsl(0, 0%, 100%);
+}
+
+#dark button {
+	border: none;
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(209, 23%, 22%);
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.scale-effect-1:hover {
+	transform: scale(1.1);
+}
+.scale-effect-1:active {
+	transform: scale(0.9);
+}
+
+.scale-effect-02:hover {
+	transform: scale(1.02);
+}
+.scale-effect-02:active {
+	transform: scale(0.98);
+}
+
+.hide {
+	display: none;
 }

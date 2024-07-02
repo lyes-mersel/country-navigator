@@ -1,78 +1,24 @@
-.search-bar {
-	float: left;
-	background-color: #fff;
-	border-radius: 5px;
+.search-filter-bars {
+	display: flex;
+	justify-content: space-between;
 }
 
-#light .search-bar {
-	box-shadow: 3px 3px 5px #f2f2f2, -3px 3px 5px #f2f2f2, 3px -3px 5px #f2f2f2,
-		-3px -3px 5px #f2f2f2;
-}
 
-#dark .search-bar {
-	background-color: hsl(209, 23%, 22%);
-	box-shadow: 3px 3px 5px #1D2A34, -3px 3px 5px #1D2A34, 3px -3px 5px #1D2A34,
-		-3px -3px 5px #1D2A34;
-}
 
-.search-bar span {
-	font-size: 22px;
-	position: relative;
-	top: 6px;
-	left: 10px;
-	color: #444;
-}
-
-#dark .search-bar span {
-	color: hsl(0, 0%, 100%);
-}
-
-.search-bar input {
-	width: 300px;
-	padding: 12px 20px;
-	border: none;
-	outline: none;
-	border-radius: 5px;
-	color: #444;
-	font-size: 14px;
-	font-weight: 600;
-}
-
-#dark .search-bar input {
-	color: hsl(0, 0%, 100%);
-	background-color: hsl(209, 23%, 22%);
-}
-
-#dark .search-bar input::placeholder {
-	color: hsl(0, 0%, 100%);
-}
-
+/* Filter Bar */
 .filter-bar {
 	position: relative;
-	float: right;
-	z-index: 1;
 	width: 180px;
 }
 
 .filter-bar button {
+	width: 100%;
 	text-align: left;
 	font-weight: 600;
-	color: #444;
-	display: block;
-	width: 100%;
 	padding: 3px 20px;
-	background-color: #fff;
-	border: none;
-	outline: none;
 }
 
 .filter-bar > button {
-	padding: 12px 60px 12px 20px;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-.filter-bar > button:hover {
 	padding: 12px 60px 12px 20px;
 	border-radius: 5px;
 }
@@ -82,32 +28,26 @@
 		-3px -3px 5px #f2f2f2;
 }
 
-#dark .filter-bar  button {
-	color: hsl(0, 0%, 100%);
-	background-color: hsl(209, 23%, 22%);
-}
-
-#dark .filter-bar > button  {
-	box-shadow: 3px 3px 5px #1D2A34, -3px 3px 5px #1D2A34, 3px -3px 5px #1D2A34,
-	-3px -3px 5px #1D2A34;
+#dark .filter-bar > button {
+	box-shadow: 3px 3px 5px #1d2a34, -3px 3px 5px #1d2a34, 3px -3px 5px #1d2a34,
+		-3px -3px 5px #1d2a34;
 }
 
 .filter-bar > div {
 	position: absolute;
-	width: 100%;
 	margin-top: 5px;
 	padding: 5px 0;
-	background-color: #fff;
 	border-radius: 5px;
 }
 
 #light .filter-bar > div {
+	background-color: hsl(0, 0%, 100%);
 	box-shadow: 3px -3px 5px #f2f2f2;
 }
 
 #dark .filter-bar > div {
 	background-color: hsl(209, 23%, 22%);
-	box-shadow:3px -3px 5px #1D2A34;
+	box-shadow: 3px -3px 5px #1d2a34;
 }
 
 .filter-bar span {
@@ -116,16 +56,9 @@
 	right: 20px;
 }
 
-.filter-bar > div > button {
-	cursor: pointer;
-}
 .filter-bar > div > button:hover {
 	font-size: 14px;
 }
 .filter-bar > div > button:active {
 	transform: scale(0.98);
-}
-
-.hide {
-	display: none;
 }

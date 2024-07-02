@@ -1,10 +1,17 @@
 import "./SelectPage.css";
+import PageBtn from "./PageBtn";
 
 const SelectPage = (props) => {
 	return (
-		<div className="select-page">
-			<button onClick={() => props.goto(props.nb)}>{props.nb}</button>
-		</div>
+		<section className="select-page">
+			{props.countries.map((page, index) => (
+				<PageBtn
+					key={index}
+					pageNumber={index + 1}
+					setPageNumber={props.setPageNumber}
+				/>
+			))}
+		</section>
 	);
 };
 

@@ -67,7 +67,6 @@
 .details-section {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	/* grid-column-gap: 50px; */
 }
 
 .details-section img {
@@ -107,10 +106,6 @@
 	flex-grow: 1;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-}
-
-.details-section-left {
-	
 }
 
 .details-section-right {

@@ -9,7 +9,7 @@ function Card(props) {
 	};
 
 	return (
-		<div className="card" onClick={handleClick}>
+		<div className="card cursor-pointer scale-effect-02" onClick={handleClick}>
 			<img src={props.info.flag.png} alt={props.info.flag.alt} />
 			<div className="info">
 				<h2>{props.info.name}</h2>

@@ -24,8 +24,8 @@ const Header = () => {
 
 	return (
 		<header>
-			<h1 onClick={goToHomePage}>Where in the world?</h1>
-			<button onClick={toggleMode}>
+			<h1 className="cursor-pointer" onClick={goToHomePage}>Where in the world?</h1>
+			<button className="cursor-pointer" onClick={toggleMode}>
 				{mode == "dark" ? (
 					<FaMoon id="moon-icon" />
 				) : (

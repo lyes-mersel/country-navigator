@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MdSearch } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import "./SearchFilterBars.css";
+import SearchBar from "./SearchBar";
 
 const SearchFilterBars = (props) => {
 	const [name, setName] = useState("");
@@ -10,7 +11,7 @@ const SearchFilterBars = (props) => {
 
 	const searchCountry = (event) => {
 		event.preventDefault();
-		name !== "" ? props.searchByName(name) : null;
+		props.name !== "" ? props.searchByName(name) : null;
 	};
 
 	const showHideRegions = () => {
@@ -54,37 +55,41 @@ const SearchFilterBars = (props) => {
 	};
 
 	return (
-		<>
-			<form className="search-bar" onSubmit={searchCountry}>
-				<span>
-					<MdSearch />
-				</span>
-				<input
-					type="text"
-					placeholder="Search for a country..."
-					value={name}
-					onChange={(e) => {
-						setName(e.target.value);
-					}}
-				/>
-			</form>
+		<section className="search-filter-bars">
+			<SearchBar
+				name={name}
+				setName={setName}
+				searchCountry={searchCountry}
+			/>
 			<div className="filter-bar">
-				<button onClick={showHideRegions}>
+				<button className="cursor-pointer" onClick={showHideRegions}>
 					{region}
 					<span>
 						<IoIosArrowDown />
 					</span>
 				</button>
 				<div className={hideRegions ? "hide" : ""}>
-					<button onClick={setRegionAll}>All</button>
-					<button onClick={setRegionAfrica}>Africa</button>
-					<button onClick={setRegionAmerica}>America</button>
-					<button onClick={setRegionAsia}>Asia</button>
-					<button onClick={setRegionEurope}>Europe</button>
-					<button onClick={setRegionOceania}>Oceania</button>
+					<button className="cursor-pointer" onClick={setRegionAfrica}>
+						Africa
+					</button>
+					<button className="cursor-pointer" onClick={setRegionAmerica}>
+						America
+					</button>
+					<button className="cursor-pointer" onClick={setRegionAsia}>
+						Asia
+					</button>
+					<button className="cursor-pointer" onClick={setRegionAll}>
+						All
+					</button>
+					<button className="cursor-pointer" onClick={setRegionEurope}>
+						Europe
+					</button>
+					<button className="cursor-pointer" onClick={setRegionOceania}>
+						Oceania
+					</button>
 				</div>
 			</div>
-		</>
+		</section>
 	);
 };
 

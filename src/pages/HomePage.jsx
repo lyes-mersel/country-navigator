@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "./HomePage.css";
 
+import "./HomePage.css";
 import SearchFilterBars from "../components/SearchFilterBars";
 import CountriesList from "../components/CountriesList";
 import MyCircularIndeterminate from "../components/MyCircularIndeterminate";
@@ -64,26 +64,18 @@ const HomePage = () => {
 
 	return (
 		<main className="home-page">
-			<section className="search-filter-bars">
-				<SearchFilterBars
-					searchByRegion={searchByRegion}
-					searchByName={searchByName}
-				/>
-			</section>
-			<section className="home-page-content">
-				{!dataFetched ? (
-					<MyCircularIndeterminate />
-				) : countries.length === 0 ? (
-					<NotFound />
-				) : (
-					<CountriesList countries={countries[pageNumber - 1]} />
-				)}
-			</section>
-			<section className="select-page-section">
-				{countries.map((page, index) => (
-					<SelectPage key={index} nb={index + 1} goto={setPageNumber} />
-				))}
-			</section>
+			<SearchFilterBars
+				searchByRegion={searchByRegion}
+				searchByName={searchByName}
+			/>
+			{!dataFetched ? (
+				<MyCircularIndeterminate />
+			) : countries.length === 0 ? (
+				<NotFound />
+			) : (
+				<CountriesList countries={countries[pageNumber - 1]} />
+			)}
+			<SelectPage countries={countries} setPageNumber={setPageNumber} />
 		</main>
 	);
 };

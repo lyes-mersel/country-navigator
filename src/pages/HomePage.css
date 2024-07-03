@@ -5,3 +5,10 @@
 	font-size: 14px;
 	padding: 40px 80px 20px;
 }
+
+@media screen and (max-width: 700px) {
+	.home-page {
+		padding: 40px;
+		font-size: 13px;
+	}
+}

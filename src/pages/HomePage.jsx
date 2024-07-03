@@ -8,7 +8,7 @@ import SelectPage from "../components/SelectPage";
 import "./HomePage.css";
 
 const HomePage = () => {
-	const MAX_COUNTRIES_PAGE = 16;
+	const MAX_COUNTRIES_PAGE = 12;
 	const [countries, setCountries] = useState([]);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [dataFetched, setDataFetched] = useState(false);

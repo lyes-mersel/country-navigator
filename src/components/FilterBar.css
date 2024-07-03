@@ -54,3 +54,31 @@
 .filter-bar > div > button:active {
 	transform: scale(0.98);
 }
+
+@media screen and (max-width: 700px) {
+	.filter-bar {
+		width: 140px;
+	}
+	.filter-bar button {
+		height: 100%;
+		padding: 0 15px;
+		font-size: 13px;
+	}
+	.filter-bar span {
+		top: 14px;
+		right: 10px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.filter-bar {
+		flex: 0 0 140px;
+	}
+	.filter-bar > button {
+		height: 40px;
+	}
+
+	.filter-bar > div > button {
+		padding: 4px 20px;
+	}
+}

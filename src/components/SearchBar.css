@@ -30,7 +30,7 @@
 }
 
 .search-bar input {
-	width: 300px;
+	width: 275px;
 	padding: 12px 20px;
 	border: none;
 	outline: none;
@@ -51,4 +51,22 @@
 
 #dark .search-bar input::placeholder {
 	color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 700px) {
+	.search-bar input {
+		width: 180px;
+		padding: 10px 0 10px 15px;
+		font-size: 13px;
+	}
+
+	.search-bar span {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.search-bar {
+		flex: 1 1 100%;
+	}
 }

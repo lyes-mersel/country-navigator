@@ -1,4 +1,5 @@
 .back-button {
+	align-self: flex-start;
 	font-size: 15px;
 	font-weight: 600;
 	padding: 8px 30px;
@@ -28,4 +29,10 @@
 
 #dark .arrow-left-icon {
 	color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 600px) {
+	.back-button {
+		padding: 5px 20px;
+	}
 }

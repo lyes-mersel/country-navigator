@@ -59,7 +59,7 @@ const CountryDetails = (props) => {
 					</dl>
 				</div>
 
-				<dl className="country-details-bottom">
+				<dl className="country-details-bottom borders-sm-lg-screen">
 					<dt>Border Countries:</dt>
 					<dd>
 						{"borders" in props.countryInfo ? (
@@ -74,6 +74,20 @@ const CountryDetails = (props) => {
 					</dd>
 				</dl>
 			</div>
+			<dl className="country-details-bottom borders-md-screen">
+				<dt>Border Countries:</dt>
+				<dd>
+					{"borders" in props.countryInfo ? (
+						Object.values(props.countryInfo.borders).map(
+							(borderCountry, index) => (
+								<BorderCountry key={index} code={borderCountry} />
+							)
+						)
+					) : (
+						<>0</>
+					)}
+				</dd>
+			</dl>
 		</section>
 	);
 };

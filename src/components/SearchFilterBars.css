@@ -1,4 +1,7 @@
 .search-filter-bars {
 	display: flex;
 	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+	gap: 10px;
 }

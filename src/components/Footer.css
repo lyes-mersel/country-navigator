@@ -1,26 +1,40 @@
 footer {
-    text-align: center;
-    padding: 20px;
+	text-align: center;
+	padding: 20px;
 }
 
 #light footer {
 	background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 -5px 5px #f2f2f2;
+	box-shadow: 0 -5px 5px #f2f2f2;
 }
 
 #dark footer {
 	background-color: hsl(209, 23%, 22%);
-    box-shadow: 0 -5px 5px #1D2A34;
+	box-shadow: 0 -5px 5px #1d2a34;
 }
 
 footer a {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 #light footer a {
-    color: hsl(200, 15%, 8%);
+	color: hsl(200, 15%, 8%);
 }
 
 #dark footer a {
-    color: hsl(0, 0%, 100%);
+	color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 700px) {
+	footer {
+		padding: 12px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	footer {
+		padding: 10px;
+		font-size: 13px;
+	}
 }

@@ -2,6 +2,7 @@
 	padding: 5px 15px;
 	margin: 0 5px 5px;
 	border-radius: 5px;
+	float: left;
 }
 
 #light .border-country {
@@ -12,4 +13,10 @@
 #dark .border-country {
 	box-shadow: 2px 2px 5px #1d2a34, -2px 2px 5px #1d2a34, 2px -2px 5px #1d2a34,
 		-2px -2px 5px #1d2a34;
+}
+
+@media screen and (max-width: 600px) {
+	.border-country {
+		padding: 3px 10px;
+	}
 }

@@ -11,7 +11,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 | -------| ------- |
 | ![](./screenshots/screenshot3.png) | ![](./screenshots/screenshot4.png) |
 
-| Mobile - HomePage | Mobile - DetailsPage |
+| Mobile - DetailsPage | Mobile - HomePage |
 | -------| ------- |
 | ![](./screenshots/screenshot5.png) | ![](./screenshots/screenshot6.png) |
 

@@ -77,14 +77,16 @@ const HomePage = () => {
 			) : countries.length === 0 ? (
 				<NotFound />
 			) : (
-				<CountriesList countries={countries[currentPage - 1]} />
+				<>
+					<CountriesList countries={countries[currentPage - 1]} />
+					<PaginationOutlined
+						totalPages={totalPages}
+						currentPage={currentPage}
+						setCurrentPage={setCurrentPage}
+					/>
+					{/* <SelectPage totalPages={totalPages} setCurrentPage={setCurrentPage} /> */}
+				</>
 			)}
-			{/* <SelectPage totalPages={totalPages} setCurrentPage={setCurrentPage} /> */}
-			<PaginationOutlined
-				totalPages={totalPages}
-				currentPage={currentPage}
-				setCurrentPage={setCurrentPage}
-			/>
 		</main>
 	);
 };

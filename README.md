@@ -11,6 +11,10 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 | -------| ------- |
 | ![](./screenshots/screenshot3.png) | ![](./screenshots/screenshot4.png) |
 
+| Mobile - HomePage | Mobile - DetailsPage |
+| -------| ------- |
+| ![](./screenshots/screenshot5.png) | ![](./screenshots/screenshot6.png) |
+
 
 ## Links
 - Solution URL: [GitHub](https://github.com/lyes-mersel/countries-challenge)

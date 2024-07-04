@@ -1,8 +1,8 @@
 const PageBtn = (props) => {
 	return (
 		<button
-			className="scale-effect-1 cursor-pointer"
-			onClick={() => props.setPageNumber(props.pageNumber)}
+			className="btn scale-effect-1 cursor-pointer"
+			onClick={() => props.setCurrentPage(props.pageNumber)}
 		>
 			{props.pageNumber}
 		</button>

@@ -16,6 +16,7 @@ const FilterBar = (props) => {
 		e.preventDefault();
 		setRegion("All");
 		setHideRegions(true);
+		props.setCurrentPage(1);
 		props.searchByRegion("");
 	};
 
@@ -23,6 +24,7 @@ const FilterBar = (props) => {
 		e.preventDefault();
 		setRegion("Africa");
 		setHideRegions(true);
+		props.setCurrentPage(1);
 		props.searchByRegion("Africa");
 	};
 
@@ -30,6 +32,7 @@ const FilterBar = (props) => {
 		e.preventDefault();
 		setRegion("America");
 		setHideRegions(true);
+		props.setCurrentPage(1);
 		props.searchByRegion("America");
 	};
 
@@ -37,6 +40,7 @@ const FilterBar = (props) => {
 		e.preventDefault();
 		setRegion("Asia");
 		setHideRegions(true);
+		props.setCurrentPage(1);
 		props.searchByRegion("Asia");
 	};
 
@@ -44,6 +48,7 @@ const FilterBar = (props) => {
 		e.preventDefault();
 		setRegion("Europe");
 		setHideRegions(true);
+		props.setCurrentPage(1);
 		props.searchByRegion("Europe");
 	};
 
@@ -51,33 +56,34 @@ const FilterBar = (props) => {
 		e.preventDefault();
 		setRegion("Oceania");
 		setHideRegions(true);
+		props.setCurrentPage(1);
 		props.searchByRegion("Oceania");
 	};
 	return (
 		<form className="filter-bar">
-			<button className="cursor-pointer" onClick={showHideRegions}>
+			<button className="btn cursor-pointer" onClick={showHideRegions}>
 				{region}
 				<span>
 					<IoIosArrowDown />
 				</span>
 			</button>
 			<div className={hideRegions ? "hide" : ""}>
-				<button className="cursor-pointer" onClick={setRegionAll}>
+				<button className="btn cursor-pointer" onClick={setRegionAll}>
 					All
 				</button>
-				<button className="cursor-pointer" onClick={setRegionAfrica}>
+				<button className="btn cursor-pointer" onClick={setRegionAfrica}>
 					Africa
 				</button>
-				<button className="cursor-pointer" onClick={setRegionAmerica}>
+				<button className="btn cursor-pointer" onClick={setRegionAmerica}>
 					America
 				</button>
-				<button className="cursor-pointer" onClick={setRegionAsia}>
+				<button className="btn cursor-pointer" onClick={setRegionAsia}>
 					Asia
 				</button>
-				<button className="cursor-pointer" onClick={setRegionEurope}>
+				<button className="btn cursor-pointer" onClick={setRegionEurope}>
 					Europe
 				</button>
-				<button className="cursor-pointer" onClick={setRegionOceania}>
+				<button className="btn cursor-pointer" onClick={setRegionOceania}>
 					Oceania
 				</button>
 			</div>

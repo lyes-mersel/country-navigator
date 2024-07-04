@@ -23,13 +23,13 @@
 	background-color: hsl(207, 26%, 17%);
 }
 
-#light button {
+#light .btn {
 	border: none;
 	color: hsl(200, 15%, 8%);
 	background-color: hsl(0, 0%, 100%);
 }
 
-#dark button {
+#dark .btn {
 	border: none;
 	color: hsl(0, 0%, 100%);
 	background-color: hsl(209, 23%, 22%);

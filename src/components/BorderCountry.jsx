@@ -23,7 +23,7 @@ const BorderCountry = (props) => {
 
 	return (
 		<button
-			className="border-country cursor-pointer scale-effect-02"
+			className="btn border-country cursor-pointer scale-effect-02"
 			onClick={() => navigate("/" + code)}
 		>
 			{name}

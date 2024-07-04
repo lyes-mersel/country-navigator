@@ -12,7 +12,7 @@ const BackButton = () => {
 
 	return (
 		<button
-			className="back-button cursor-pointer scale-effect-02"
+			className="btn back-button cursor-pointer scale-effect-02"
 			onClick={handleClick}
 		>
 			<MyFaArrowLeftLong />

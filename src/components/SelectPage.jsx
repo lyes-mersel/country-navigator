@@ -4,11 +4,11 @@ import PageBtn from "./PageBtn";
 const SelectPage = (props) => {
 	return (
 		<section className="select-page">
-			{props.countries.map((page, index) => (
+			{Array.from({ length: props.totalPages }, (_, index) => (
 				<PageBtn
 					key={index}
 					pageNumber={index + 1}
-					setPageNumber={props.setPageNumber}
+					setCurrentPage={props.setCurrentPage}
 				/>
 			))}
 		</section>

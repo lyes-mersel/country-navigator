@@ -6,11 +6,13 @@ import CircularIndeterminate from "../components/CircularIndeterminate";
 import NotFound from "../components/NotFound";
 import SelectPage from "../components/SelectPage";
 import "./HomePage.css";
+import PaginationOutlined from "../components/PaginationOutlined";
 
 const HomePage = () => {
 	const MAX_COUNTRIES_PAGE = 12;
 	const [countries, setCountries] = useState([]);
-	const [pageNumber, setPageNumber] = useState(1);
+	const [currentPage, setCurrentPage] = useState(1);
+	const [totalPages, setTotalPages] = useState(0);
 	const [dataFetched, setDataFetched] = useState(false);
 	const [url, setUrl] = useState(
 		"https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca2"
@@ -40,6 +42,7 @@ const HomePage = () => {
 					countriesList[indexGroup].push(countryInfos);
 				});
 				setCountries(countriesList);
+				setTotalPages(countriesList.length);
 			} else {
 				setCountries([]);
 			}
@@ -67,15 +70,21 @@ const HomePage = () => {
 			<SearchFilterBars
 				searchByRegion={searchByRegion}
 				searchByName={searchByName}
+				setCurrentPage={setCurrentPage}
 			/>
 			{!dataFetched ? (
 				<CircularIndeterminate />
 			) : countries.length === 0 ? (
 				<NotFound />
 			) : (
-				<CountriesList countries={countries[pageNumber - 1]} />
+				<CountriesList countries={countries[currentPage - 1]} />
 			)}
-			<SelectPage countries={countries} setPageNumber={setPageNumber} />
+			{/* <SelectPage totalPages={totalPages} setCurrentPage={setCurrentPage} /> */}
+			<PaginationOutlined
+				totalPages={totalPages}
+				currentPage={currentPage}
+				setCurrentPage={setCurrentPage}
+			/>
 		</main>
 	);
 };

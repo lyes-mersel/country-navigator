@@ -12,3 +12,10 @@
 		font-size: 13px;
 	}
 }
+
+@media screen and (max-width: 320px) {
+	.home-page {
+		padding: 40px 30px;
+		font-size: 13px;
+	}
+}

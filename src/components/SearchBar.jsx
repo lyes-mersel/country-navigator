@@ -8,6 +8,7 @@ const SearchBar = (props) => {
 
 	const searchCountry = (event) => {
 		event.preventDefault();
+		props.setCurrentPage(1);
 		name !== "" ? props.searchByName(name) : null;
 	};
 

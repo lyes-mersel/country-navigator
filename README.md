@@ -3,13 +3,18 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 
 ## Screenshots
+| HomePage - Light Mode | HomePage - Dark Mode |
+| -------| ------- |
 | ![](./screenshots/screenshot1.png) | ![](./screenshots/screenshot2.png) |
+
+| DetailsPage - Light Mode | DetailsPage - Dark Mode |
+| -------| ------- |
 | ![](./screenshots/screenshot3.png) | ![](./screenshots/screenshot4.png) |
 
 
 ## Links
-- Solution URL: [](github.com/lyes-mersel/countries-challenge)
-- Live Site URL: [](countries-challenge-mersel.vercel.app/)
+- Solution URL: [GitHub](https://github.com/lyes-mersel/countries-challenge)
+- Live Site URL: [Vercel](https://countries-challenge-mersel.vercel.app/)
 
 
 ## Built with

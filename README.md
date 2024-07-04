@@ -3,8 +3,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 
 ## Screenshots
-| ![](./screenshot1.png) | ![](./screenshot2.png) |
-| ![](./screenshot3.png) | ![](./screenshot4.png) |
+| ![](./screenshots/screenshot1.png) | ![](./screenshots/screenshot2.png) |
+| ![](./screenshots/screenshot3.png) | ![](./screenshots/screenshot4.png) |
 
 
 ## Links

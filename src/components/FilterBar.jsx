@@ -2,91 +2,85 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 import "./FilterBar.css";
+import OutsideClickHandler from "./OutsideClickHandler";
 
-const FilterBar = (props) => {
-	const [region, setRegion] = useState("Filter by Region");
-	const [hideRegions, setHideRegions] = useState(true);
+const FilterBar = ({
+	region,
+	setRegion,
+	searchByRegion,
+	setName,
+	setCurrentPage,
+}) => {
+	const [regionsVisible, setRegionsVisible] = useState(false);
 
-	const showHideRegions = (e) => {
-		e.preventDefault();
-		setHideRegions(!hideRegions);
+	const showRegions = () => {
+		setRegionsVisible(true);
+	};
+	const hideRegions = () => {
+		setRegionsVisible(false);
 	};
 
-	const setRegionAll = (e) => {
+	const handleRequestSearchByRegion = (e, region) => {
 		e.preventDefault();
-		setRegion("All");
-		setHideRegions(true);
-		props.setCurrentPage(1);
-		props.searchByRegion("");
+		setRegion(region);
+		hideRegions();
+		setName("");
+		setCurrentPage(1);
+		region === "All" ? searchByRegion("") : searchByRegion(region);
 	};
 
-	const setRegionAfrica = (e) => {
-		e.preventDefault();
-		setRegion("Africa");
-		setHideRegions(true);
-		props.setCurrentPage(1);
-		props.searchByRegion("Africa");
-	};
-
-	const setRegionAmerica = (e) => {
-		e.preventDefault();
-		setRegion("America");
-		setHideRegions(true);
-		props.setCurrentPage(1);
-		props.searchByRegion("America");
-	};
-
-	const setRegionAsia = (e) => {
-		e.preventDefault();
-		setRegion("Asia");
-		setHideRegions(true);
-		props.setCurrentPage(1);
-		props.searchByRegion("Asia");
-	};
-
-	const setRegionEurope = (e) => {
-		e.preventDefault();
-		setRegion("Europe");
-		setHideRegions(true);
-		props.setCurrentPage(1);
-		props.searchByRegion("Europe");
-	};
-
-	const setRegionOceania = (e) => {
-		e.preventDefault();
-		setRegion("Oceania");
-		setHideRegions(true);
-		props.setCurrentPage(1);
-		props.searchByRegion("Oceania");
-	};
 	return (
 		<form className="filter-bar">
-			<button className="btn cursor-pointer" onClick={showHideRegions}>
+			<button
+				type="button"
+				className="btn cursor-pointer"
+				onClick={showRegions}
+			>
 				{region}
 				<span>
 					<IoIosArrowDown />
 				</span>
 			</button>
-			<div className={hideRegions ? "hide" : ""}>
-				<button className="btn cursor-pointer" onClick={setRegionAll}>
-					All
-				</button>
-				<button className="btn cursor-pointer" onClick={setRegionAfrica}>
-					Africa
-				</button>
-				<button className="btn cursor-pointer" onClick={setRegionAmerica}>
-					America
-				</button>
-				<button className="btn cursor-pointer" onClick={setRegionAsia}>
-					Asia
-				</button>
-				<button className="btn cursor-pointer" onClick={setRegionEurope}>
-					Europe
-				</button>
-				<button className="btn cursor-pointer" onClick={setRegionOceania}>
-					Oceania
-				</button>
-			</div>
+			{regionsVisible && (
+				<OutsideClickHandler onOutsideClick={hideRegions}>
+					<button
+						className="btn cursor-pointer"
+						onClick={(e) => handleRequestSearchByRegion(e, "All")}
+					>
+						All
+					</button>
+					<button
+						className="btn cursor-pointer"
+						onClick={(e) => handleRequestSearchByRegion(e, "Africa")}
+					>
+						Africa
+					</button>
+					<button
+						className="btn cursor-pointer"
+						onClick={(e) => handleRequestSearchByRegion(e, "America")}
+					>
+						America
+					</button>
+					<button
+						className="btn cursor-pointer"
+						onClick={(e) => handleRequestSearchByRegion(e, "Asia")}
+					>
+						Asia
+					</button>
+					<button
+						className="btn cursor-pointer"
+						onClick={(e) => handleRequestSearchByRegion(e, "Europe")}
+					>
+						Europe
+					</button>
+					<button
+						className="btn cursor-pointer"
+						onClick={(e) => handleRequestSearchByRegion(e, "Oceania")}
+					>
+						Oceania
+					</button>
+				</OutsideClickHandler>
+			)}
 		</form>
 	);
 };

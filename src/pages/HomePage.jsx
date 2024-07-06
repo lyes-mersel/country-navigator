@@ -52,7 +52,7 @@ const HomePage = () => {
 	}, [url, setCountries, setDataFetched]);
 
 	const searchByName = (name) => {
-		setUrl(`https://restcountries.com/v3.1/name/${name}?fullText=true`);
+		setUrl(`https://restcountries.com/v3.1/name/${name}`);
 	};
 
 	const searchByRegion = (region) => {

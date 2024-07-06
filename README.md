@@ -1,6 +1,7 @@
 # Country Navigator
 ## Frontend Mentor - REST Countries API with color theme switcher solution
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
+
 Country Navigator is a responsive React application that uses the REST Countries API to provide a comprehensive list of countries worldwide. Users can filter countries by continent, search by name, and view detailed information by clicking on country cards. For developers, this project serves as a showcase of React best practices with a focus on responsiveness and clean, extendable code.
 
 

@@ -21,8 +21,7 @@ Country Navigator is a responsive React application that uses the REST Countries
 
 ## Links
 - Solution URL: [GitHub](https://github.com/lyes-mersel/countries-challenge)
-- Live Site URL: [Vercel](https://countries-challenge-mersel.vercel.app/)
-
+- Live Site URL: [Vercel](https://countrynavigator.vercel.app/)
 
 ## Built with
 - React.js
